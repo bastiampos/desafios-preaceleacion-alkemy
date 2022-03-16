@@ -66,5 +66,13 @@ func formatearDireccion(direccion: Direccion) -> String {
 print(formatearDireccion(direccion: direccionJoseline))
 
 func mostrarDirecciones(de direccion: Direccion) -> String {
-    if ()
+    if (direccion.piso != nil && direccion.departamento != nil) {
+        return "Está en el piso \(direccion.piso) y el departamento \(direccion.departamento)"
+    }
+    
+    return "No hay piso o departamento"
 }
+
+print(mostrarDirecciones(de: direccionJose))
+print(mostrarDirecciones(de: direccionJuanita))
+print(mostrarDirecciones(de: direccionJoseline))
